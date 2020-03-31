@@ -357,16 +357,19 @@ footer{
             transform: translateX(5px);
         }
     }
-    h2{
-        color: $whiteColor;
-        font-size: 16px;
-        font-weight: 200;
-        letter-spacing: 4px;
-        margin: 70px auto 0;
-        background-color: #000000;
-        width: 100%;
-        text-align: center;
-        padding: 5px;
-        
+    .footerend{
+        padding-top: 70px;
+        h2{
+            color: $whiteColor;
+            font-size: 14px;
+            font-weight: 200;
+            margin: auto;
+            background-color: #000000;
+            width: 100%;
+            text-align: center;
+            padding: 5px;
+            
+        }
     }
+    
 }

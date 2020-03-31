@@ -357,12 +357,15 @@ footer a:hover {
           transform: translateX(5px);
 }
 
-footer h2 {
+footer .footerend {
+  padding-top: 70px;
+}
+
+footer .footerend h2 {
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 200;
-  letter-spacing: 4px;
-  margin: 70px auto 0;
+  margin: auto;
   background-color: #000000;
   width: 100%;
   text-align: center;
