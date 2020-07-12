@@ -80,6 +80,7 @@ header .privacy {
   padding: 8px 8px;
   letter-spacing: 1.6px;
   text-decoration: none;
+  display: inline-block;
   margin-bottom: 80px;
 }
 
