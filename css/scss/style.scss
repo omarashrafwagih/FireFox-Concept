@@ -1,375 +1,350 @@
 $mainColor: #1f123a;
 $buttonColor: #0060de;
-$buttonHovered : #024eb1;
+$buttonHovered: #024eb1;
 $whiteColor: white;
 $blackColor: black;
 $sectionPaddingTop: 100px;
 $sectionPaddingBottom: 30px;
 
-
-
 %transistion {
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-%button{
-    background-color: $buttonColor;
-    display: block;
-    padding: 12px 32px;
-    font-size: 18px;
-    color: white;
-    font-weight: 400;
-    border: none;
+%button {
+  background-color: $buttonColor;
+  display: block;
+  padding: 12px 32px;
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  @extend %transistion;
+  &:hover {
     outline: none;
-    @extend %transistion;
-        &:hover {
-            outline: none;
-            background-color: $buttonHovered;
-        }
-
-}        
-
-*::selection{
-    background-color: orangered;
+    background-color: $buttonHovered;
+  }
 }
 
-body{
-    box-sizing: border-box;
-    overflow-x: hidden;
+*::selection {
+  background-color: orangered;
 }
 
-header{
-    background-color: #20123a;
-    padding-bottom: $sectionPaddingBottom;
-    background-image: url(../../images/headerbg.svg);
-    background-repeat: no-repeat;
-    background-position: top right -400px;
-    background-attachment: scroll;
-    background-size: auto 100%;
-    min-height: 88vh;
-    color: $whiteColor;
-    min-height: 300px;
-    overflow: hidden;
-    .container-fluid{
-        width: 87%;
-        margin: 0 auto;
-    }
-    .logo{
-        max-width: 45%;
-        margin-top: 75px;
-    }
-    h1{
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 3.5rem;
-        letter-spacing: 1.2px;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        font-family: 'Inter', sans-serif;
-    }
-    h2{
-        font-size: 45px;
-        font-family: 'Long Cang', cursive;
-        font-weight: 100;
-    }
-    button{
-        @extend %button;
-    }
-    .privacy{
-        text-decoration: underline;
-        color: $whiteColor;
-        font-size: 11px;
-        padding: 8px 8px ;
-        letter-spacing: 1.6px;
-        text-decoration: none;
-        display: block;
-        margin-bottom: 80px;
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-    a{
-        text-decoration: underline;
-        color: $whiteColor;
-        display: inline-block;
-        font-size: 12px;
-        letter-spacing: 1.3px;
-        line-height: 2.5em;
-        @extend %transistion;
-        &:hover{
-            transform: translateX(5px);
-            color: $whiteColor;
-        }
-        
-    }
-    .browser{
-        margin-top: 75px;
-        max-width: 100%;
-    }
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-
-@media(max-width: 768px){
-    header{
-        background-image: none;
-        text-align: center;
-        width: 100%;
-        .logo{
-            max-width: 90%;
-        }
-        button{
-            width: auto;
-            margin: 0 auto;
-        }
-        ul{
-            margin: -50px;
-        }
-    }
-}
-
-
-
-#icons{
-    padding-top: $sectionPaddingTop;
-    padding-bottom: $sectionPaddingBottom;
-    .item{
-        max-width: 300px;
-        min-height: 300px;
-        margin: 0 auto;
-    }
-    img{
-        min-width: 100px;
-        margin-bottom: 35px;
-    }
-    h3{
-        font-size: 26px;
-        text-transform: capitalize;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
-    p{
-        font-size: 16px;
-        max-width: 350px;
-        margin: 0 auto;
-        font-weight: 400;
-    }
-}
-
-
-
-
-#privacy{
-    color: $whiteColor;
-    background-color: #20123a;
-    padding-top: $sectionPaddingTop;
-    background-repeat: no-repeat;
-    background-position: top right -400px;
-    background-attachment: scroll;
-    background-size: auto 100%;
+header {
+  background-color: #20123a;
+  padding-bottom: $sectionPaddingBottom;
+  background-image: url(../../images/headerbg.svg);
+  background-repeat: no-repeat;
+  background-position: top right -400px;
+  background-attachment: scroll;
+  background-size: auto 100%;
+  min-height: 88vh;
+  color: $whiteColor;
+  min-height: 300px;
+  overflow: hidden;
+  .container-fluid {
+    width: 87%;
     margin: 0 auto;
-    .container-fluid{
-        width: 87%;
-        margin: 0 auto;
-        
+  }
+  .logo {
+    max-width: 45%;
+    margin-top: 75px;
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 3.5rem;
+    letter-spacing: 1.2px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+  }
+  h2 {
+    font-size: 45px;
+    font-family: 'Long Cang', cursive;
+    font-weight: 100;
+  }
+  button {
+    @extend %button;
+  }
+  .privacy {
+    text-decoration: underline;
+    color: $whiteColor;
+    font-size: 11px;
+    padding: 8px 8px;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+    margin-bottom: 80px;
+    &:hover {
+      text-decoration: underline;
     }
-    .oval{
-        background-color: #20123a;
-        padding-top: $sectionPaddingTop;
-        background-image: url(../../images/oval.svg);
-        background-repeat: no-repeat;
-        background-position: top left -100px;
-        background-attachment: scroll;
-        margin-top: -100px;
+  }
+  a {
+    text-decoration: underline;
+    color: $whiteColor;
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+    line-height: 2.5em;
+    @extend %transistion;
+    &:hover {
+      transform: translateX(5px);
+      color: $whiteColor;
     }
-    .logo-icon{
-        max-width: 12%;
-    }
-    h3{
-        font-size: 40px;
-        font-weight: 600;
-        letter-spacing: 1.4px;
-        padding-top: 10px;
-        font-family: 'Inter', sans-serif;
-    }
-    span{
-        font-size: 17px;
-        font-weight: 400;
-    }
-    button{
-        @extend %button;
-        margin: 35px 0 25px 0;
-    }
-    a{
-        text-decoration: underline;
-        color: $whiteColor;
-        display: inline-block;
-        font-size: 12px;
-        letter-spacing: 1.3px;
-        padding-bottom: $sectionPaddingTop;
-        @extend %transistion;
-        &:hover{
-            transform: translateX(5px);
-            color: $whiteColor;
-        }
-    }
-
-
-} 
-
-
-@media(max-width: 768px){
-    #privacy{
-        background-image: none;
-        text-align: center;
-        width: 100%;
-        .logo-icon{
-            max-width: 15%;
-        }
-        h3{
-            font-size: 35px;
-        }
-        span{
-            margin-bottom: 20px;
-            display: block;
-        }
-        button{
-            width: auto;
-            margin: 15px auto;
-        }
-        .oval{
-            display: none;
-        }
-    }
+  }
+  .browser {
+    margin-top: 75px;
+    max-width: 100%;
+  }
 }
 
+@media (max-width: 768px) {
+  header {
+    background-image: none;
+    text-align: center;
+    width: 100%;
+    .logo {
+      max-width: 90%;
+    }
+    button {
+      width: auto;
+      margin: 0 auto;
+    }
+    ul {
+      margin: -50px;
+    }
+  }
+}
 
+#icons {
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+  .item {
+    max-width: 300px;
+    min-height: 300px;
+    margin: 0 auto;
+  }
+  img {
+    min-width: 100px;
+    margin-bottom: 35px;
+  }
+  h3 {
+    font-size: 26px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+    max-width: 350px;
+    margin: 0 auto;
+    font-weight: 400;
+  }
+}
 
-#cards{
+#privacy {
+  color: $whiteColor;
+  background-color: #20123a;
+  padding-top: $sectionPaddingTop;
+  background-repeat: no-repeat;
+  background-position: top right -400px;
+  background-attachment: scroll;
+  background-size: auto 100%;
+  margin: 0 auto;
+  .container-fluid {
+    width: 87%;
+    margin: 0 auto;
+  }
+  .oval {
+    background-color: #20123a;
     padding-top: $sectionPaddingTop;
-    .itemaya{
-        margin: 0 40px 0 40px;
+    background-image: url(../../images/oval.svg);
+    background-repeat: no-repeat;
+    background-position: top left -100px;
+    background-attachment: scroll;
+    margin-top: -100px;
+  }
+  .logo-icon {
+    max-width: 12%;
+  }
+  h3 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    padding-top: 10px;
+    font-family: 'Inter', sans-serif;
+  }
+  span {
+    font-size: 17px;
+    font-weight: 400;
+  }
+  button {
+    @extend %button;
+    margin: 35px 0 25px 0;
+  }
+  a {
+    text-decoration: underline;
+    color: $whiteColor;
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+    padding-bottom: $sectionPaddingTop;
+    @extend %transistion;
+    &:hover {
+      transform: translateX(5px);
+      color: $whiteColor;
     }
-    img{
-        max-width: 100%;
-        display: block;
-    }
-    span{
-        display: block;
-    }
+  }
 }
 
-@media(max-width: 768px){
-    #cards{
-        text-align: center;
-        img{
-            margin: 0 auto;
-        }
-        p{
-            margin-bottom: 30px;
-            display: block;
-        }
+@media (max-width: 768px) {
+  #privacy {
+    background-image: none;
+    text-align: center;
+    width: 100%;
+    .logo-icon {
+      max-width: 15%;
     }
+    h3 {
+      font-size: 35px;
+    }
+    span {
+      margin-bottom: 20px;
+      display: block;
+    }
+    button {
+      width: auto;
+      margin: 15px auto;
+    }
+    .oval {
+      display: none;
+    }
+  }
 }
 
+#cards {
+  padding-top: $sectionPaddingTop;
+  .itemaya {
+    margin: 0 40px 0 40px;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  span {
+    display: block;
+  }
+}
 
-#mind{
-    padding-top: $sectionPaddingTop;
-    padding-Bottom: $sectionPaddingTop;
-    .container-fluid{
-        background-color: #ededf0;
-        width: 85%;
-        padding: 0 100px 0 100px;
-    }
-
-    img{
-        display: block;
-        position: relative;
-        bottom: 70px;
-    }
-
-    h2{
-        font-size: 40px;
-        padding-top: 70px;
-        font-weight: 500;
+@media (max-width: 768px) {
+  #cards {
+    text-align: center;
+    img {
+      margin: 0 auto;
     }
     p {
-        font-size: 30px;
-        font-family: 'Long Cang', cursive;
-        font-weight: 100;
+      margin-bottom: 30px;
+      display: block;
     }
-    a{
-        text-decoration: underline;
-        font-weight: bold;
-        color: $buttonHovered;
-    }
-
+  }
 }
 
+#mind {
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingTop;
+  .container-fluid {
+    background-color: #ededf0;
+    width: 85%;
+    padding: 0 100px 0 100px;
+  }
 
-@media(max-width: 992px){
+  img {
+    display: block;
+    position: relative;
+    bottom: 70px;
+  }
 
-    #mind{
-        padding-Bottom: 0;
-        text-align: center;
-        .container-fluid{
-            width: 100%;
-            padding: 0;
-        }
-        img{
-            display: none;
-        }
-        h2{
-            font-size: 30px;
-        }
-        p{
-            font-size: 26px;
-        }
-        a{
-            padding-Bottom: $sectionPaddingTop - 20;
-            display: block;
-        }
-    }
-
+  h2 {
+    font-size: 40px;
+    padding-top: 70px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 30px;
+    font-family: 'Long Cang', cursive;
+    font-weight: 100;
+  }
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: $buttonHovered;
+  }
 }
 
+@media (max-width: 992px) {
+  #mind {
+    padding-bottom: 0;
+    text-align: center;
+    .container-fluid {
+      width: 100%;
+      padding: 0;
+    }
+    img {
+      display: none;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 26px;
+    }
+    a {
+      padding-bottom: $sectionPaddingTop - 20;
+      display: block;
+    }
+  }
+}
 
-footer{
-    background-color: $mainColor;
-    h4{
-        font-size: 20px;
-        color: $whiteColor;
-        font-weight: 500;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        text-decoration: underline;
+footer {
+  background-color: $mainColor;
+  h4 {
+    font-size: 20px;
+    color: $whiteColor;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-decoration: underline;
+  }
+  a {
+    display: block;
+    color: $whiteColor;
+    font-weight: 200;
+    @extend %transistion;
+    &:hover {
+      color: $whiteColor;
+      transform: translateX(5px);
     }
-    a{
-        display: block;
-        color: $whiteColor;
-        font-weight: 200;
-        @extend %transistion;
-        &:hover{
-            color: $whiteColor;
-            transform: translateX(5px);
-        }
+  }
+  .footerend {
+    padding-top: 70px;
+    h2 {
+      color: $whiteColor;
+      font-size: 14px;
+      font-weight: 200;
+      margin: auto;
+      background-color: #000000;
+      width: 100%;
+      text-align: center;
+      padding: 5px;
     }
-    .footerend{
-        padding-top: 70px;
-        h2{
-            color: $whiteColor;
-            font-size: 14px;
-            font-weight: 200;
-            margin: auto;
-            background-color: #000000;
-            width: 100%;
-            text-align: center;
-            padding: 5px;
-            
-        }
-    }
-    
+  }
 }
